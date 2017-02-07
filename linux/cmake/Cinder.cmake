@@ -45,7 +45,7 @@ if( NOT CMAKE_CXX_COMPILER OR NOT CMAKE_C_COMPILER )
 endif()
 
 # C++ flags - TODO: Add logic for the case when GCC5's new C++ ABI is desired.
-set( CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=0 ${STDCXXLIB} -std=c++11 -Wno-reorder -Wno-unused-private-field -Wno-unused-local-typedef" )
+set( CXX_FLAGS "-D_GLIBCXX_USE_CXX11_ABI=1 ${STDCXXLIB} -std=c++11 -Wno-reorder -Wno-unused-private-field -Wno-unused-local-typedef" )
 
 if( CINDER_TOOLCHAIN_CLANG )
 	# Disable these warnings, many of which are coming from Boost - append at end
